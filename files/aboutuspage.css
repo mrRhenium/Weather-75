@@ -1,6 +1,8 @@
 @import "navbar.css";
 
-
+*{
+       border: 1px solid red !important;
+}
 html{
        font-size: 100%;
 }
@@ -168,7 +170,7 @@ html{
        display: flex;
        justify-content: space-evenly;
        width: 100%;
-       height: 50%;
+       height: 30%;
        text-align: center;
        border: 0px solid red;
 }
@@ -193,7 +195,7 @@ html{
        justify-content: center;
        align-items: flex-end;
        width: 100%;
-       height: 50%;
+       height: 70%;
        text-align: center;
 }
 .icon_share a{
@@ -238,6 +240,9 @@ html{
        .abtUs p{
               font-size: 2rem;
        }
+       .icon_share a{
+              font-size: 2rem;
+       }
 }
 @media screen and (max-Width:550px){
        html{
@@ -254,19 +259,29 @@ html{
               font-size: 40%;
        }
        #header_img img{
-              width: 15rem;
-              height: 5rem;
+              width: 25rem;
+              height: 6rem;
        }
        #fake a{
-              font-size: 3.5rem;
+              font-size: 5.5rem;
        }
        .abtUs p{
-              font-size: 1.1rem;
+              font-size: 2rem;
        }
 }
 @media screen and (max-Width:400px){
        html{
               font-size: 50%;
+       }
+       #header_img img{
+              width: 20rem;
+              height: 6rem;
+       }
+       #fake a{
+              font-size: 4.5rem;
+       }
+       .abtUs p{
+              font-size: 1.7rem;
        }
 }
 @media screen and (max-Width:372px){
@@ -274,13 +289,13 @@ html{
               font-size: 1.3rem;
        }
 }
-@media screen and (max-Width:280px){
+@media screen and (max-Width:320px){
        #header_img img{
               width: 15rem;
               height: 5rem;
        }
        #fake a{
-              font-size: 3.2rem;
+              font-size: 3.5rem;
        }
        .abtUs p{
               font-size: 1.2rem;

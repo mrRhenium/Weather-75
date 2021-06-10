@@ -82,16 +82,43 @@ const searching = async (e) => {
               const arrData = [jsonData];
            //   console.log(arrData);
        
-       citymessage.innerHTML=`today's WEATHER in ${cityVal}`;
-
+      
        cityinfo.innerHTML=
                  `${arrData[0].name} / ${arrData[0].sys.country}`;
        tempval.innerHTML =
                  `${arrData[0].main.temp}<sup>o</sup>C`;
  
           const tempmood = arrData[0].weather[0].main; 
-          console.log(tempmood);     
-      if(tempmood=="Clear"){
+        console.log(tempmood);
+        citymessage.innerHTML=`today's WEATHER in ${cityVal} is ${tempmood}`;
+        
+    switch (tempmood) {
+      case "Clear":
+        tempimg.innerHTML=
+        "<i class='fa fa-sun-o' aria-hidden='true' style='color:orangered'></i>";
+        break;
+        case "Clouds":
+        tempimg.innerHTML=
+        "<i class='fa fa-cloud' aria-hidden='true'style='color:white'></i>";
+        break;
+        case "Rain":
+        tempimg.innerHTML=
+        "<i class='fa fa-sun-o' aria-hidden='true'style='color:#09aef9'></i>";
+        break;
+        case "Haze":
+        tempimg.innerHTML=
+        "<i class='fa fa-sun-o' aria-hidden='true' style='color:orangered'></i>";
+        break;
+        case "Drizzle":
+        tempimg.innerHTML=
+        "<i class='fa fa-sun-o' aria-hidden='true'style='color:#09aef9'></i>";
+        break;
+    
+      default:
+        tempimg.innerHTML="<i></i>";    
+    }
+
+      /*if(tempmood=="Clear"){
             tempimg.innerHTML=
             "<i class='fa fa-sun-o' aria-hidden='true' style='color:orangered'></i>";
       }else if(tempmood=="Clouds"){
@@ -99,18 +126,24 @@ const searching = async (e) => {
             "<i class='fa fa-cloud' aria-hidden='true'style='color:white'></i>";
       }else if(tempmood=="Rain"){
              tempmood.innerHTML=
-             "<i class='fa fa-cloud' aria-hidden='true'></i>";
+             "<i class='fa fa-cloud' aria-hidden='true'style='color:#09aef9'></i>";
       }else if(tempmood=="haze"){
              tempmood.innerHTML=
              "<i class='fa fa-cloud' aria-hidden='true'></i>";
-      }else{
-
-      }
+      }else if(tempmood=="Drizzle"){
+             tempmood.innerHTML=
+             "<i class='fa fa-cloud' aria-hidden='true'style='color:#09aef9'></i>";
+       }*/
   }catch(error){
             console.log(error);
             cityinfo.innerHTML="Invalid <br> city name";
-            tempval.style.display="none";
+            //tempval.style.display="none";
             tempimg.style.display="none";
+            tempval.style.marginTop="5rem"; 
+            tempval.innerHTML="<a>Sorry</a>";
+            setTimeout(()=>{
+              location.reload();
+            },2000);
   };
 };
 
