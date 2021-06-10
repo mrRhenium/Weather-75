@@ -157,6 +157,7 @@ html{
           height: 50%;
           margin-top:2%;
           border-radius: 20px;
+          user-select: text;
           background-color: rgba(19,0,40, .7);
           box-shadow: inset 0 0 5px 2px white,
                       inset 0 0 10px 2px white;         
@@ -168,6 +169,7 @@ html{
           border: 0px solid red;
           width: 100%;
           height: 25%;
+          user-select: text;
           text-align: center;
           word-spacing: 6rem;
           font-size: 1.7rem;
@@ -182,6 +184,7 @@ html{
           border: 0px solid red;
           width: 100%;
           height: 25%;
+          user-select: text;
           text-align: center;
           font-size: 2rem;
           padding-top: .5rem;
@@ -208,6 +211,7 @@ html{
           border: 0px solid red;
           width: 70%;
           height: 100%;
+          user-select: text;
           border-bottom-left-radius: 20px;
           text-align: center;
           font-size: 3.5rem;
@@ -217,6 +221,7 @@ html{
 }
 #tempval sup{
           color: yellow;
+          user-select: text;
 }
 #tempimg{
           position: relative;
