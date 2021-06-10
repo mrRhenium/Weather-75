@@ -1,8 +1,6 @@
 @import "navbar.css";
 
-*{
-       border: 1px solid red !important;
-}
+
 html{
        font-size: 100%;
 }
