@@ -1,0 +1,236 @@
+@import "navbar.css";
+
+html{
+       font-size: 100%;
+}
+
+#container{
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       height: 100%;
+       border: 0px solid red;
+       background-color: white;
+       overflow: hidden;
+}
+#about_container{
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       height: 80%;
+       border: 0px solid red;
+       background-color: #09aef9;
+       transform: translateY(-100%);
+       animation: about_containeranim 1s 1s linear forwards;
+}
+@keyframes about_containeranim{
+       0%{
+            transform: translateY(-100%);
+       }
+       100%{
+              transform: translateY(0%);
+         }
+}
+#about_header{
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       height: 40%;
+       border: 0px solid red;
+}
+.abt_content{
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       align-self: flex-end;
+       width: 100%;
+       height: 60%;
+       border: 0px solid red;
+}
+.abtUs{
+       position: relative;
+       display: flex;
+       width: 80%;
+       height: 80%;
+       text-align: center;
+       padding: .5rem;
+       font-size: 1.2rem;
+       font-weight: 700;
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       overflow-y: scroll;
+       border: 0px solid black;
+       visibility: hidden;
+       animation: icon_shareanim 1s 3s linear forwards;
+}
+.abtUs::-webkit-scrollbar{
+       border:1px solid tomato;
+       width: 10px;
+       border-radius:10px;
+       box-shadow: inset 0 0 8px black;
+       visibility: hidden;
+}
+.abtUs::-webkit-scrollbar-track{
+       background-color: transparent;
+       width: 10px;
+       height: 10px;
+}
+.abtUs::-webkit-scrollbar-thumb{
+     background: white; 
+     width: 10px;
+     height: 20px;
+     border-radius: 50px;
+     border: 2px solid black;
+}
+.abtUs::-webkit-scrollbar-corner{
+      background-color: black;
+      width: 10px;
+}
+#header_p{
+       position: relative;
+       display: flex;
+       width: 100%;
+       height: 50%;
+       border: 0px solid black;
+}
+#header_img{
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 100%;
+       height: 50%;
+       cursor: pointer;
+       border: 0px solid black;
+}
+#header_img img{
+       width: 15rem;
+       height: 4rem;
+       border: 0px solid red;
+}
+#about_container_f{
+       position: absolute;
+       display: flex;
+       width: 100%;
+       height: 16%;
+       border: 0px solid red;
+}
+#about_header_f{
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       height: 100%;
+       border: 0px solid red;
+}
+#fake{
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 100%;
+       height: 100%;
+       border: 0px solid black;
+}
+#fake a{
+       display: flex;
+       font-size: 4rem;
+       color: darkmagenta;
+       font-weight: 800;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.icon_container{
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       width: 70%;
+       height: 20%;
+       align-self: center;
+       border: 0px solid red;
+       transform: translateY(500%);
+       animation: iconanim 1s 3s linear forwards;
+}
+@keyframes iconanim{
+       0%{
+              transform: translateY(500%);
+       }
+       100%{
+              transform: translateY(0%);
+       }
+}
+.icons{
+       position: relative;
+       display: flex;
+       justify-content: space-evenly;
+       width: 100%;
+       height: 80%;
+       text-align: center;
+       border: 0px solid red;
+}
+.icons a{
+       position: relative;
+       display: block;
+       color: black;
+       text-align: center;
+       font-size: 2rem;
+       padding-top: 1rem;
+       width: 4rem;
+       height: 100%;
+       border: 0px solid red;
+}
+.icons a:hover{
+       color: red;
+       font-size: 2.2rem;
+}
+.icon_share{
+       position: relative;
+       display: block;
+       width: 100%;
+       height: 20%;
+       text-align: center;
+}
+.icon_share a{
+       position: relative;
+       display: block;
+       font-size: 1rem;
+       font-weight: lighter;
+       visibility: hidden;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       animation: icon_shareanim 1s 5s linear forwards;
+}
+@keyframes icon_shareanim{
+       0%{
+              visibility: hidden;
+       }
+       100%{
+              visibility: visible;
+       }
+}
+@media screen and (max-Width:1024px){
+       html{
+              font-size: 80%;
+       }
+}
+@media screen and (max-Width:800px){
+       html{
+              font-size: 70%;
+       }
+}
+@media screen and (max-Width:550px){
+       html{
+              font-size: 60%;
+       }
+       .icon_container{
+              width: 100%;
+              height: 15%;
+       }
+       
+}
+@media screen and (max-Width:400px){
+       html{
+              font-size: 50%;
+       }
+}

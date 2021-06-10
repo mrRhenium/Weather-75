@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>WEATHER WEBSITE</title>
+<link rel="stylesheet" href="weatherpage.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="icon" href="images/cloudy.png" type="image/jpg">
+</head>
+<body>
+                        <!--navbar-->
+<div class="nav_bar">
+    <div class="webname_container">
+          <div class="web_logo"><img src="images/cloudy.png"></div>
+           <div class="web_name"><a>Weather-75</a></div>
+           <div class="slider">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+           </div>
+    </div>
+    <div class="navbar_btn_container">
+       <a href="../index.html" class="nav_btn">Home</a>
+       <a href="weatherpage.html" class="nav_btn">Weather</a>
+       <a href="aboutuspage.html" class="nav_btn">About Us</a>
+    </div> 
+ </div>
+ 
+
+                      <!--home paga--->
+<div id=container>
+    <div id="report">
+          <a id="citymessage">today's WEATHER </a>
+          <div id="search">
+             <span id="search_logo">
+                 <i class="fa fa-search" aria-hidden="true"></i></span>
+             <input type="text" id="search_bar" placeholder="enter the city name"
+             onchange="print_city(this)">
+             <input type="submit" value="Search" id="search_btn">
+          </div>
+          <div id="display">
+            <div id="dateinfo">03:50 Tuesday</div>
+            <div id="cityinfo">please!!<br>enter the city name <br> in search bar</div>
+            <div id="tempinfo">
+               <div id="tempval"><sup></sup></div>
+               <div id="tempimg">
+              <!--<i class="fa fa-cloud" aria-hidden="true"></i>-->
+               </div>
+            </div>
+          </div>
+    </div>
+    <div id="weathimg">
+      <img src="images/web1img2.jpg" alt="">
+<div class="focus1"style="transform: translate(18%,33%);"></div>
+<div class="focus2"style="transform: translate(18%,137%);"></div>
+<div class="focus3"style="transform: translate(131%,33%);"></div>
+    </div>
+</div>
+                             
+                                       
+
+               <!--footer-->
+<footer><a href="aboutuspage.html">mr.Rhenium</a></footer>
+ <script src="weatherpage.js"></script>
+ <script src="navbar.js"></script>            
+</body>
+</html>

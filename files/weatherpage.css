@@ -1,0 +1,399 @@
+@import "navbar.css";
+*{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          border: 0px solid red;
+}
+html{
+       font-size: 100%;
+}
+#container{
+       position: relative;
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;    
+       justify-content: space-around;
+       align-content: center;
+       width: 100%;
+       height: 100%;
+       background-color:rb(0,0,0);
+       border: 0px solid red;
+}  
+#report img,#weathimg img{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+}
+#weathimg{
+          position: relative;
+          display: grid;
+          width: 40%;
+          height: 100%;
+          border: 0px solid red;
+}
+.focus1,.focus2,.focus3{
+          position: absolute;
+          display: flex;
+          width: 24%;
+          height: 38.5%;
+          border: 3px solid red;
+          border-radius: 10px;
+}
+.focusa1{
+          animation: coloranimate 1s linear;
+}
+.focusa2{
+          animation: coloranimate 1s 1s linear;
+}
+.focusa3{
+          animation: coloranimate 1s 2s linear;
+}
+@keyframes coloranimate{
+   0%{
+          box-shadow: 0 0 5px 1px black,
+                      inset 0 0 100px 10px red;
+   }
+   100%{
+          box-shadow: 0 0 10px 5px black,
+          inset 0 0 0 0 yellow;
+   }
+}
+#report{
+          position: relative;
+          display: flex;
+          flex-direction:row;
+          justify-content: center;
+          flex-wrap: wrap;
+          align-content: center;
+          width: 60%;
+          height: 100%;
+          border: 0px solid red;
+          background-color: rgba(32, 161, 221,.3);
+}
+#citymessage{
+          position: relative;
+          color:  darkmagenta;
+          font-size: 2.2rem;
+          font-weight: 900;
+          text-align: center;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          border: 0px solid red;
+          text-transform: uppercase;
+          margin-top: 2%;
+          width: 100%;
+          height: 10%;
+}
+#search{
+          position: relative;
+          display: flex;
+          border: 0px solid red;
+          width: 70%;
+          height: 10%;
+          min-height: 40px;
+          margin-top: 5%;
+          border-radius: 50px;
+}
+#search_logo{
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 10%;
+          height: 100%;
+          border: 2px solid black;
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+          background-color: darkcyan;
+}
+#search_logo i{
+       position: absolute;
+       font-size: 1.5rem;
+       color: white;
+}
+#search_bar{
+          position: relative;
+          width: 70%;
+          height: 100%;
+          border: 0px solid black;
+          outline: none;
+          color: black;
+          font-size: 2rem;
+          text-transform: capitalize;
+          background-color: lightskyblue;
+          caret-color: red;
+          box-shadow: inset 0 0 8px 0px black;
+          padding-left: 2%;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+}
+#search_bar::placeholder{
+          font-size: 1.5rem;
+          padding-left: .5rem;
+}
+#search_btn{
+          position: relative;
+          width: 20%;
+          height: 100%;
+          border: 2px solid black;
+          outline: none;
+          cursor: pointer;
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
+          background-color: darkcyan;
+          color: lightcyan;
+          font-size: 1.5rem;
+}
+.search_btn2{
+          font-size: 1.3rem !important;
+          color: yellow !important;
+}
+#display{
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border: 2px solid black;
+          width: 60%;
+          height: 50%;
+          margin-top:2%;
+          border-radius: 20px;
+          background-color: rgba(19,0,40, .7);
+          box-shadow: inset 0 0 5px 2px white,
+                      inset 0 0 10px 2px white;         
+}
+#dateinfo{
+          position: relative;
+          display: block;
+          color: yellowgreen;
+          border: 0px solid red;
+          width: 100%;
+          height: 25%;
+          text-align: center;
+          word-spacing: 6rem;
+          font-size: 1.7rem;
+          padding-top: 1.2rem;
+          text-transform: capitalize;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#cityinfo{
+          position: relative;
+          border: 0px solid red;
+          width: 100%;
+          height: 25%;
+          text-align: center;
+          font-size: 2rem;
+          padding-top: .5rem;
+          color: white;
+          text-transform: capitalize;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#tempinfo{
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          border: 0px solid red;
+          width: 100%;
+          height: 50%;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+}
+#tempval{
+          position: relative;
+          display: block;
+          border: 0px solid red;
+          width: 70%;
+          height: 100%;
+          border-bottom-left-radius: 20px;
+          text-align: center;
+          font-size: 3.5rem;
+          padding-top: .3rem;
+          color: yellow;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#tempval sup{
+          color: yellow;
+}
+#tempimg{
+          position: relative;
+          display: block;
+          border: 0px solid red;
+          width: 30%;
+          height: 100%;
+          border-bottom-right-radius: 20px;
+}
+#tempimg i{
+       font-size: 5rem;
+       text-align: center;
+       color: white;
+}
+@media screen and (max-width:1123px){
+       html{
+              font-size: 70%;
+       }
+       #cityinfo{
+              padding-top: 2rem;
+              font-size: 3rem;
+              height: 50%;
+       }
+       #tempinfo{
+              height: 50%;
+       }
+       #tempval{
+              font-size: 4rem;
+              height: 100%;
+       }
+       #tempimg{
+              height: 100%;
+              text-align: center;
+       }
+       #tempimg i{
+              font-size: 6rem;
+       }
+       #search{
+              height: 8%;
+       }
+}
+@media screen and (max-width:900px){
+       html{
+              font-size: 60%;
+       }
+}
+@media screen and (max-width:800px){
+       html{
+              font-size: 50%;
+       }
+}
+@media screen and (max-width:650px){
+       #weathimg{
+              display: none;
+       }
+       #report{
+              width: 100%;
+              height: 100%;
+       }
+       #citymessage{
+              font-size: 3.5rem;
+       }
+       #search{
+              width: 80%;
+              height: 8%;
+       }
+       #search_logo i{
+              font-size: 2.5rem;
+       }
+       #search_bar{
+              font-size: 3.5rem;
+       }
+       #search_bar::placeholder{
+              font-size: 2.5rem;
+       }
+       #search_btn{
+              font-size: 2.5rem;
+       }
+       #display{
+              height: 60%;
+       }
+       #dateinfo{
+              font-size: 3.5rem;
+       }
+       #cityinfo{
+              font-size: 3.5rem;
+              height: 20%;
+       }
+       #tempinfo{
+              height: 60%;
+       }
+       #tempval{
+              width: 100%;
+              height: 50%;
+              font-size: 6rem;
+       }
+       #tempimg{
+              width: 100%;
+              height: 50%;
+              text-align: center;
+       }
+       #tempimg i{
+              font-size: 9rem;
+       }
+}
+@media screen and (max-width:540px){
+       html{
+              font-size: 45% !important;
+       }
+       #search{
+              width: 90%;
+              height: 5%;
+       }
+       #display{
+              width: 70%;
+              height: 60%;
+       }
+       #search_btn{
+              font-size: 2rem;
+       }
+}
+@media screen and (max-width:425px){
+       html{
+              font-size: 30%;
+       }
+       #citymessage{
+              font-size: 3rem;
+       }
+       #display{
+              height: 50%;
+       }
+       #dateinfo{
+              word-spacing: 1rem;
+              font-size: 3rem;
+       }
+       #cityinfo{
+              font-size: 3rem;
+              height: 20%;
+       }
+       #tempval{
+              font-size: 5rem;
+       }
+       #tempimg i{
+              font-size: 7rem;
+              padding-top: 1rem;
+       }
+}
+@media screen and (max-width:360px){
+       html{
+              font-size: 20%;
+       }
+       #citymessage{
+              font-size: 3rem;
+       }
+       #search{
+              height: 2% !important;
+       }
+       #search_logo i{
+              font-size: 2rem;
+       }
+       #search_bar{
+              font-size: 2rem;
+       }
+       #search_bar::placeholder{
+              font-size: 2rem;
+       }
+       #search_btn{
+              font-size: 1.5rem;
+       }
+       #display{
+              width: 90%;
+              height: 50%;
+       }
+       #dateinfo{
+              word-spacing: 1rem;
+              font-size: 3rem;
+       }
+       #cityinfo{
+              font-size: 3rem;
+              height: 20%;
+       }
+}
