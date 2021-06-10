@@ -1,5 +1,6 @@
 @import "navbar.css";
 
+
 html{
        font-size: 100%;
 }
@@ -148,6 +149,7 @@ html{
        flex-direction: column;
        width: 70%;
        height: 20%;
+       margin-top: .5rem;
        align-self: center;
        border: 0px solid red;
        transform: translateY(500%);
@@ -166,7 +168,7 @@ html{
        display: flex;
        justify-content: space-evenly;
        width: 100%;
-       height: 80%;
+       height: 50%;
        text-align: center;
        border: 0px solid red;
 }
@@ -176,10 +178,10 @@ html{
        color: black;
        text-align: center;
        font-size: 2rem;
-       padding-top: 1rem;
+       padding-top: 0rem;
        width: 4rem;
        height: 100%;
-       border: 0px solid red;
+       border: 0px solid red !important;
 }
 .icons a:hover{
        color: red;
@@ -187,15 +189,18 @@ html{
 }
 .icon_share{
        position: relative;
-       display: block;
+       display: flex;
+       justify-content: center;
+       align-items: flex-end;
        width: 100%;
-       height: 20%;
+       height: 50%;
        text-align: center;
 }
 .icon_share a{
        position: relative;
        display: block;
        font-size: 1rem;
+       padding-bottom: .5rem;
        font-weight: lighter;
        visibility: hidden;
        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -213,10 +218,25 @@ html{
        html{
               font-size: 80%;
        }
+       .icons a{
+              padding-top: .5rem;
+       }
 }
 @media screen and (max-Width:800px){
        html{
               font-size: 70%;
+       }
+}
+@media screen and (max-width:650px){
+       #header_img img{
+              width: 25rem;
+              height: 7rem;
+       }
+       #fake a{
+              font-size: 6.5rem;
+       }
+       .abtUs p{
+              font-size: 2rem;
        }
 }
 @media screen and (max-Width:550px){
@@ -229,8 +249,40 @@ html{
        }
        
 }
+@media screen and (max-Width:460px){
+       html{
+              font-size: 40%;
+       }
+       #header_img img{
+              width: 15rem;
+              height: 5rem;
+       }
+       #fake a{
+              font-size: 3.5rem;
+       }
+       .abtUs p{
+              font-size: 1.1rem;
+       }
+}
 @media screen and (max-Width:400px){
        html{
               font-size: 50%;
+       }
+}
+@media screen and (max-Width:372px){
+       .nav_btn{
+              font-size: 1.3rem;
+       }
+}
+@media screen and (max-Width:280px){
+       #header_img img{
+              width: 15rem;
+              height: 5rem;
+       }
+       #fake a{
+              font-size: 3.2rem;
+       }
+       .abtUs p{
+              font-size: 1.2rem;
        }
 }

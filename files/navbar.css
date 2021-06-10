@@ -161,7 +161,10 @@ footer a{
                    font-size: 75%;
           }
           .nav_bar{
-                    height: 6rem;
+                    height: 4rem;
+          }
+          .nav_btn{
+                  font-size: 1.5rem;
           }
 }
 @media screen and (max-width:700px){
@@ -183,6 +186,12 @@ footer a{
           footer a{
                     font-size: 1.5rem;
           }
+          .nav_bar{
+                  height: 6.8rem;
+          }
+          .nav_btn{
+                  font-size: 2.5rem;
+          }
           .webname_container{
                     width: 100%;
                     height: 100%;
@@ -192,7 +201,7 @@ footer a{
                     height: 50%;
           }
           .nav_bar_class{
-                    height: 9rem;
+                    height: 12rem;
                     transition: .5s;
                     border-bottom:2px solid black;
           }
@@ -211,7 +220,10 @@ footer a{
                   height: 4rem;
           }
           .web_name a{
-                  font-size: 2.5rem;
+                  font-size: 2.57rem;
+          }
+          .nav_bar_class{
+                height: 11.1rem;
           }
 }
 @media screen and (max-width:450px){
@@ -219,7 +231,7 @@ footer a{
                     font-size: 55% !important;
           }
           .nav_btn{
-                    font-size: 1.5rem;
+                    font-size: 2rem;
           }
           .web_logo{
                 width: 3.5rem;
@@ -235,5 +247,10 @@ footer a{
         }  
         .slider{
                     margin-left: 85%;
+        }
+}
+@media screen and (max-width:340px){  
+        .nav_btn{
+                font-size: 1.35rem;
         }
 }
