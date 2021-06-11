@@ -273,16 +273,24 @@ html{
 }
 @media screen and (max-width:900px){
        html{
-              font-size: 60%;
-       }
-}
-@media screen and (max-width:800px){
-       html{
               font-size: 50%;
        }
        #dateinfo{
               font-size: 2.5rem;
        }
+       .nav_bar{
+              height: 5.54rem;
+       }
+       .nav_btn{
+              font-size: 2.52rem;
+       }
+       .web_name a{
+              font-size: 2.8rem;
+       }
+       .web_logo{
+              width: 4.5rem;
+              height: 4rem;
+       } 
 }
 @media screen and (max-width:650px){
        .nav_bar{
@@ -350,9 +358,21 @@ html{
               font-size: 8rem;
        }
 }
+@media screen and (max-height:590px){
+       #tempimg i{
+              font-size: 6rem;
+              padding-top: 0rem;
+       }
+       #tempval{
+              font-size: 3rem;
+       }
+}
 @media screen and (max-width:540px){
        html{
               font-size: 45% !important;
+       }
+       .nav_bar_class{
+              height: 12.2rem !important;
        }
        #search{
               width: 90%;
@@ -365,8 +385,14 @@ html{
        #search_btn{
               font-size: 2rem;
        }
+       .nav_bar{
+              height: 7.4rem;
+       }
+       .web_name a{
+              font-size: 3.12rem;
+       }
 }
-@media screen and (max-width:425px){
+@media screen and (max-width:450px){
        html{
               font-size: 30%;
        }
@@ -392,17 +418,17 @@ html{
               font-size: 8rem;
               padding-top: 0rem;
        }
-}
-@media screen and (max-height:590px){
-       #tempimg i{
-              font-size: 6rem;
-              padding-top: 0rem;
+       .nav_bar{
+              height: 8rem;
        }
-       #tempval{
-              font-size: 3rem;
+       .nav_bar_class{
+              height: 13.5rem !important;
+       }
+       .web_name a{
+              font-size: 2.8rem;
        }
 }
-@media screen and (max-width:360px){
+@media screen and (max-width:340px){
        html{
               font-size: 20%;
        }
@@ -440,7 +466,7 @@ html{
               font-size: 2.57rem;
       }
       .nav_btn{
-             font-size: 1.8rem;
+             font-size: 1.84rem;
       }
 }
 @media screen and (max-width:310px){
@@ -458,8 +484,5 @@ html{
        }
        #search_logo i{
               font-size: 1.2rem;
-       }
-       .nav_btn{
-              font-size: 1.7rem;
        }
 }

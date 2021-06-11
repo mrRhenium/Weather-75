@@ -281,13 +281,13 @@ html{
        .abtUs p{
               font-size: 1.7rem;
        }
-}
+}/*
 @media screen and (max-Width:372px){
        .nav_btn{
-              font-size: 1.3rem;
+              font-size: 2rem;
        }
-}
-@media screen and (max-Width:320px){
+}*/
+@media screen and (max-Width:340px){
        #header_img img{
               width: 15rem;
               height: 5rem;
@@ -297,5 +297,8 @@ html{
        }
        .abtUs p{
               font-size: 1.2rem;
+       }
+       .nav_btn{
+              font-size: 1.5rem;
        }
 }

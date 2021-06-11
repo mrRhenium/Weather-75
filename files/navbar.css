@@ -188,7 +188,7 @@ footer a{
                     font-size: 1.5rem;
           }
           .nav_bar{
-                  height: 6.8rem;
+                  height: 6.7rem;
           }
           .nav_btn{
                   font-size: 2.5rem;
@@ -232,7 +232,7 @@ footer a{
                     font-size: 55% !important;
           }
           .nav_btn{
-                    font-size: 2rem;
+                    font-size: 2.05rem;
           }
           .web_logo{
                 width: 3.5rem;
@@ -252,6 +252,6 @@ footer a{
 }
 @media screen and (max-width:340px){  
         .nav_btn{
-                font-size: 1.35rem;
+                font-size: 1.5rem;
         }
 }

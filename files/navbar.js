@@ -13,4 +13,16 @@ slider.addEventListener("click",()=>{
     navbar_btn_container.classList.toggle("navbar_btn_container_class");
     rotater.classList.toggle("rotaterdown");
 
+    setTimeout(()=>{
+        nav_bar.classList.remove("nav_bar_class");
+        webname_container.classList.remove("webname_container_class");
+        navbar_btn_container.classList.remove("navbar_btn_container_class");
+        rotater.classList.remove("rotaterdown");
+    },5000);
+});
+document.querySelector("#report").addEventListener("click",()=>{
+        nav_bar.classList.remove("nav_bar_class");
+        webname_container.classList.remove("webname_container_class");
+        navbar_btn_container.classList.remove("navbar_btn_container_class");
+        rotater.classList.remove("rotaterdown");
 })
