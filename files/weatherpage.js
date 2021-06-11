@@ -90,32 +90,42 @@ const searching = async (e) => {
  
           const tempmood = arrData[0].weather[0].main; 
         console.log(tempmood);
-        citymessage.innerHTML=`today's WEATHER in ${cityVal} is ${tempmood}`;
+        
         
     switch (tempmood) {
       case "Clear":
         tempimg.innerHTML=
         "<i class='fa fa-sun-o' aria-hidden='true' style='color:orangered'></i>";
+        citymessage.innerHTML=`today's WEATHER is ${tempmood} in ${cityVal}`;
         break;
         case "Clouds":
         tempimg.innerHTML=
         "<i class='fa fa-cloud' aria-hidden='true'style='color:white'></i>";
+        citymessage.innerHTML=`today it is cloudy in ${cityVal}`;
         break;
         case "Rain":
         tempimg.innerHTML=
         "<i class='fa fa-sun-o' aria-hidden='true'style='color:#09aef9'></i>";
+        citymessage.innerHTML=`today it is raining in ${cityVal}`;
         break;
         case "Haze":
         tempimg.innerHTML=
         "<i class='fa fa-sun-o' aria-hidden='true' style='color:orangered'></i>";
+        citymessage.innerHTML=`today there is haze in ${cityVal}`;
         break;
         case "Drizzle":
         tempimg.innerHTML=
         "<i class='fa fa-sun-o' aria-hidden='true'style='color:#09aef9'></i>";
+        citymessage.innerHTML=`today it is raining lightly in ${cityVal}`;
         break;
-    
+        case "Mist":
+        tempimg.innerHTML=
+        "<i class='fa fa-sun-o' aria-hidden='true'style='color:white'></i>";
+        citymessage.innerHTML=`today there is fog in ${cityVal}`;
+        break;
       default:
-        tempimg.innerHTML="<i></i>";    
+        tempimg.innerHTML="<i></i>";
+        citymessage.innerHTML=`today's WEATHER in ${cityVal}`;    
     }
 
       /*if(tempmood=="Clear"){
@@ -141,6 +151,7 @@ const searching = async (e) => {
             tempimg.style.display="none";
             tempval.style.marginTop="5rem"; 
             tempval.innerHTML="<a>Sorry</a>";
+            citymessage.innerHTML=`today's weather`;
             setTimeout(()=>{
               location.reload();
             },2000);
