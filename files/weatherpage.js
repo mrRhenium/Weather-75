@@ -105,22 +105,22 @@ const searching = async (e) => {
         break;
         case "Rain":
         tempimg.innerHTML=
-        "<i class='fa fa-sun-o' aria-hidden='true'style='color:#09aef9'></i>";
+        "<i class='fa fa-cloud' aria-hidden='true'style='color:#09aef9'></i>";
         citymessage.innerHTML=`today it is raining in ${cityVal}`;
         break;
         case "Haze":
         tempimg.innerHTML=
-        "<i class='fa fa-sun-o' aria-hidden='true' style='color:orangered'></i>";
+        "<i class='fa fa-sun-o' aria-hidden='true' style='color:brown'></i>";
         citymessage.innerHTML=`today there is haze in ${cityVal}`;
         break;
         case "Drizzle":
         tempimg.innerHTML=
-        "<i class='fa fa-sun-o' aria-hidden='true'style='color:#09aef9'></i>";
+        "<i class='fa fa-cloud' aria-hidden='true'style='color:#09aef9'></i>";
         citymessage.innerHTML=`today it is raining lightly in ${cityVal}`;
         break;
         case "Mist":
         tempimg.innerHTML=
-        "<i class='fa fa-sun-o' aria-hidden='true'style='color:white'></i>";
+        "<i class='fa fa-cloud' aria-hidden='true'style='color:white'></i>";
         citymessage.innerHTML=`today there is fog in ${cityVal}`;
         break;
       default:
