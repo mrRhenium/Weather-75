@@ -72,6 +72,9 @@ const searching = async (e) => {
          cityinfo.innerHTML="please!!<br>enter the city name";
          tempval.style.display="none";
          tempimg.style.display="none";
+         setTimeout(()=>{
+          location.reload();
+        },2000);
   }else{
       try{
      let url =`https://api.openweathermap.org/data/2.5/weather?q=
