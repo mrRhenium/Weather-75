@@ -74,7 +74,7 @@ const searching = async (e) => {
          tempimg.style.display="none";
          setTimeout(()=>{
           location.reload();
-        },2000);
+        },3000);
   }else{
       try{
      let url =`https://api.openweathermap.org/data/2.5/weather?q=
