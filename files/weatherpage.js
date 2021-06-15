@@ -24,26 +24,6 @@ if(mn<10){mn=`0${mn}`;}
 
 dateinfo.innerHTML=`${hr}:${mn} ${day}`;
 
-
-search_btn.addEventListener("click",() =>{
-        search_btn.classList.add("search_btn2");
-    setTimeout(() => {
-        search_btn.classList.remove("search_btn2");
-    },500);
-});
-
-
-search_btn.addEventListener("click",() =>{
-    focus1.classList.add("focusa1");
-    focus2.classList.add("focusa2");
-    focus3.classList.add("focusa3");
-  setTimeout(() => {
-    focus1.classList.remove("focusa1");
-    focus2.classList.remove("focusa2");
-    focus3.classList.remove("focusa3");    
-  },3000);
-});
-
 const keys={
   Enter : false
 };
@@ -64,8 +44,51 @@ function print_city(e){
 citymessage.innerHTML=`today's WEATHER in ${e.value}`;
 }
 
-const searching = async (e) => {
-     //   e.preventDefault();
+const voice_btn = document.querySelector("#voice_i");
+const voice = document.querySelector("#voice");
+
+search_bar.onclick=function(){
+    search_bar.style.width="70%";
+    search_btn.style.display="block";
+    voice.style.display="none";
+}
+/*
+document.addEventListener("click",()=>{
+  search_bar.style.width="80%";
+  voice.style.display="block";
+  search_btn.style.display="none";
+},false);
+*/
+
+function voice_search(){
+  const rec = new webkitSpeechRecognition();
+        rec.lang="en-GB";
+        rec.interimResults=true;
+        rec.onresult=function(e){
+           const txt = e.results[0][0].transcript;
+                 search_bar.value=txt;
+                 console.log("hello" + txt);
+        }
+        console.log("voice");
+        rec.onaudiostart=function () {
+          voice_btn.classList.add("voice_blow");
+          voice.classList.add("voice_blow_border");
+          search_bar.value=`speack now`;
+          search_bar.style.textAlign="center";   
+        }
+        rec.onaudioend=function () {
+          search_bar.style.textAlign="left";
+          blowlight();
+          searching();
+          voice_btn.classList.remove("voice_blow");
+          voice.classList.remove("voice_blow_border");
+        }
+        rec.start();
+}
+
+
+const searching = async (e) => {   
+  //   e.preventDefault();
   let cityVal=search_bar.value;
   
   if(cityVal==""){
@@ -130,30 +153,13 @@ const searching = async (e) => {
         tempimg.innerHTML="<i></i>";
         citymessage.innerHTML=`today's WEATHER in ${cityVal}`;    
     }
-
-      /*if(tempmood=="Clear"){
-            tempimg.innerHTML=
-            "<i class='fa fa-sun-o' aria-hidden='true' style='color:orangered'></i>";
-      }else if(tempmood=="Clouds"){
-            tempimg.innerHTML=
-            "<i class='fa fa-cloud' aria-hidden='true'style='color:white'></i>";
-      }else if(tempmood=="Rain"){
-             tempmood.innerHTML=
-             "<i class='fa fa-cloud' aria-hidden='true'style='color:#09aef9'></i>";
-      }else if(tempmood=="haze"){
-             tempmood.innerHTML=
-             "<i class='fa fa-cloud' aria-hidden='true'></i>";
-      }else if(tempmood=="Drizzle"){
-             tempmood.innerHTML=
-             "<i class='fa fa-cloud' aria-hidden='true'style='color:#09aef9'></i>";
-       }*/
   }catch(error){
             console.log(error);
             cityinfo.innerHTML="Invalid <br> city name";
             //tempval.style.display="none";
             tempimg.style.display="none";
             tempval.style.marginTop="5rem"; 
-            tempval.innerHTML="<a>Sorry</a>";
+       //  if(){  tempval.innerHTML="<a>Sorry</a>";}
             citymessage.innerHTML=`today's weather`;
             setTimeout(()=>{
               location.reload();
@@ -162,23 +168,29 @@ const searching = async (e) => {
 };
 
 };
+function blowlight() {
+  focus1.classList.add("focusa1");
+  focus2.classList.add("focusa2");
+  focus3.classList.add("focusa3");
+  setTimeout(() => {
+  focus1.classList.remove("focusa1");
+  focus2.classList.remove("focusa2");
+  focus3.classList.remove("focusa3");    
+  },3000);
+  search_btn.classList.add("search_btn2");
+  setTimeout(() => {
+      search_btn.classList.remove("search_btn2");
+  },500);
+}
+
+search_btn.addEventListener("click",() =>{
+  blowlight();
+});
 
 document.addEventListener("keypress",()=>{
        if(keys.Enter){
-        searching();
-       search_btn.classList.add("search_btn2");
-       setTimeout(() => {
-           search_btn.classList.remove("search_btn2");
-       },500);
-
-       focus1.classList.add("focusa1");
-       focus2.classList.add("focusa2");
-       focus3.classList.add("focusa3");
-     setTimeout(() => {
-       focus1.classList.remove("focusa1");
-       focus2.classList.remove("focusa2");
-       focus3.classList.remove("focusa3");    
-     },3000);
+         searching();
+         blowlight();
      }       
 });
 
