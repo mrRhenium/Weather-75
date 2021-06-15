@@ -69,7 +69,7 @@ function voice_search(){
         rec.onresult=function(e){
            const txt = e.results[0][0].transcript;
                  search_bar.value=txt;
-                 console.log("hello" + txt);
+           //    console.log("hello" + txt);
         }
         console.log("voice");
         rec.onaudiostart=function () {
@@ -173,7 +173,7 @@ const searching = async (e) => {
   }catch(error){
             console.log(error);
             cityinfo.innerHTML="Invalid <br> city name";
-            //tempval.style.display="none";
+            tempval.style.display="none";
             tempimg.style.display="none";
             tempval.style.marginTop="5rem"; 
        //  if(){  tempval.innerHTML="<a>Sorry</a>";}
