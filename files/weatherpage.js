@@ -25,7 +25,8 @@ if(mn<10){mn=`0${mn}`;}
 dateinfo.innerHTML=`${hr}:${mn} ${day}`;
 
 const keys={
-  Enter : false
+  Enter : false,
+  g     : false
 };
 
 document.addEventListener("keydown",keypress);
@@ -59,6 +60,7 @@ document.addEventListener("click",()=>{
   search_btn.style.display="none";
 },false);
 */
+
 
 function voice_search(){
   const rec = new webkitSpeechRecognition();
@@ -117,7 +119,7 @@ const searching = async (e) => {
           const tempmood = arrData[0].weather[0].main; 
         console.log(tempmood);
         
-        
+  
     switch (tempmood) {
       case "Clear":
         tempimg.innerHTML=
@@ -151,8 +153,23 @@ const searching = async (e) => {
         break;
       default:
         tempimg.innerHTML="<i></i>";
-        citymessage.innerHTML=`today's WEATHER in ${cityVal}`;    
+        citymessage.innerHTML=`today's WEATHER in ${cityVal}`;
     }
+    const google_asis = citymessage.innerHTML;
+    const g_a_t_val = `${arrData[0].main.temp} degree celcius`;    
+    function speack(){
+      const speech= new SpeechSynthesisUtterance();          
+      speech.lang="hi-GB";
+      speech.text=`${google_asis} and temperature is ${g_a_t_val}`;
+          speech.volume=1;//0-1
+          speech.rate=.9;//0.1-10
+          speech.pitch=1;//0-2
+          console.log("google_asis");
+          speechSynthesis.speak(speech);
+        }
+
+        speack();
+    
   }catch(error){
             console.log(error);
             cityinfo.innerHTML="Invalid <br> city name";
@@ -191,7 +208,10 @@ document.addEventListener("keypress",()=>{
        if(keys.Enter){
          searching();
          blowlight();
-     }       
+        }
+        else if(keys.g){
+           voice_search();
+        }       
 });
 
 search_btn.addEventListener("click",searching);
