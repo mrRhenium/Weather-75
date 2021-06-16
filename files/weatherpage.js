@@ -61,7 +61,7 @@ document.addEventListener("click",()=>{
 },false);
 */
 
-
+const aud_google = document.querySelector("#aud_google");
 function voice_search(){
   const rec = new webkitSpeechRecognition();
         rec.lang="en-GB";
@@ -75,11 +75,13 @@ function voice_search(){
         rec.onaudiostart=function () {
           voice_btn.classList.add("voice_blow");
           voice.classList.add("voice_blow_border");
+          aud_google.play();
           search_bar.value=`speack now`;
           search_bar.style.textAlign="center";   
         }
         rec.onaudioend=function () {
           search_bar.style.textAlign="left";
+          aud_google.play();
           blowlight();
           searching();
           voice_btn.classList.remove("voice_blow");
@@ -140,6 +142,11 @@ const searching = async (e) => {
         tempimg.innerHTML=
         "<i class='fa fa-sun-o' aria-hidden='true' style='color:brown'></i>";
         citymessage.innerHTML=`today there is haze in ${cityVal}`;
+        break;
+        case "Smoke":
+        tempimg.innerHTML=
+        "<i class='' aria-hidden='true' style='color:brown'></i>";
+        citymessage.innerHTML=`today there is smoke in ${cityVal}`;
         break;
         case "Drizzle":
         tempimg.innerHTML=
