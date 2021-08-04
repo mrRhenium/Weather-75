@@ -76,7 +76,7 @@ function voice_search(){
           voice_btn.classList.add("voice_blow");
           voice.classList.add("voice_blow_border");
           aud_google.play();
-          search_bar.value=`speack now`;
+          search_bar.value=`speak now`;
           search_bar.style.textAlign="center";   
         }
         rec.onaudioend=function () {

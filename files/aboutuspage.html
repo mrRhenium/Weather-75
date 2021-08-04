@@ -74,10 +74,10 @@
             <a href="sms:?body=github.com">
                <i class="fa fa-commenting-o" aria-hidden="true"></i>
             </a>
-            <a href="https://telegram.me/share/hellow">
+            <a href="https://telegram.me/share/url?text=hello">
                <i class="fa fa-paper-plane" aria-hidden="true"></i>
             </a>
-            <a href="tel:8302065349">
+            <a href="" id="phone">
                <i class="fa fa-phone" aria-hidden="true"></i>
             </a>
             <a href="mailto:?subject=github.com">
@@ -94,13 +94,13 @@
                               <!--footer-->
 <footer><a href="404errorpage.html">mr.Rhenium</a></footer>
 <script src="navbar.js"></script>                  
+<script>
+const phone = document.querySelector("#phone");
+phone.addEventListener("click",()=>{
+     var number=prompt("Enter the mobile no.: ");
+     phone.setAttribute("href",`tel:${number}`);
+});
+</script>
 </body>
 </html>
 
-<!-- <a rel="external" href="sms:?body=Check out this SlideShare : https://www.slideshare.net/subashreee29/ppt-semi-conductor" title="SMS" id="sharebysms" data-url="sms:?body=Check out this SlideShare : https://www.slideshare.net/subashreee29/ppt-semi-conductor">
-            <i class="fa fa-comment-o"></i>
-          </a> -->
-
-<!--<a rel="external" href="mailto:?subject=Check out this SlideShare presentation&amp;body=https://www.slideshare.net/subashreee29/ppt-semi-conductor" title="E-mail" id="sharebyemail" data-url="mailto:?subject=Check out this SlideShare presentation&amp;body=https://www.slideshare.net/subashreee29/ppt-semi-conductor">
-          <i class="fa fa-envelope"></i>
-        </a>-->
