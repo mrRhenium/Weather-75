@@ -273,15 +273,16 @@
     font-size: 2.5rem;
   }
 }
+
 @media screen and (max-width:430px){
   .feedback_cont{
     width: 95%;
   }
   #star-logo label{
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   #star-logo input:checked ~ label{
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
   #like label{
     font-size: 2.2rem;
@@ -294,12 +295,12 @@
   }
   
   #post_btn input{
-    width: 5rem;
-    height: 2.5rem;
-    font-size: 1.7rem;
+    width: 6rem;
+    height: 2.7rem;
+    font-size: 2.1rem;
   }
   #post_btn input:hover{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     transform: scale(.95);
   }
 }
