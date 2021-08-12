@@ -71,7 +71,7 @@ const  post = async (event)=>{
        event.preventDefault();
      try{
 
-          if(feed_msg.value!=""&&feed_nam!=""){
+          if(feed_msg.value!=""&&feed_nam!=""&&reaction[0].storage_like!=""&&reaction[0].storage_star!=""){
              const data = await fetch(link,
                 {
                    method:"POST",
@@ -89,7 +89,11 @@ const  post = async (event)=>{
             console.log(reaction[0].storage_star);
      
      
-             if(data){alert("Thanks for feedback");};
+             if(data){
+                  alert("Thanks for feedback 😍");
+                  feed_msg.value="";
+                  feed_nam.value="";
+             };
 
           }else{
                alert("Please!! fill the form");
