@@ -17,7 +17,7 @@ html{
        align-content: center;
        width: 100%;
        height: 100%;
-       background-color:rb(0,0,0);
+       /* background-color:rgba(0,0,0); */
        border: 0px solid red;
 }  
 #report img,#weathimg img{

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>WEATHER WEBSITE</title>
+<link rel="stylesheet" href="feedback.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="icon" href="images/cloudy.png" type="image/jpg">
+</head>
+<body>
+
+                            <!--navbar-->
+<div class="nav_bar">
+     <div class="webname_container">
+            <div class="web_logo"><img src="images/cloudy.png"></div>
+            <div class="web_name"><a>Weather-75</a></div>
+            <div class="slider">
+               <div class="rotater">
+  <i class="fa fa-chevron-right"id="chevron"aria-hidden="true"></i>
+               </div> 
+           </div>
+     </div>
+     <div class="navbar_btn_container">
+        <a href="../index.html" class="nav_btn">Home</a>
+        <a href="weatherpage.html" class="nav_btn">Weather</a>
+        <a href="aboutuspage.html" class="nav_btn">About Us</a>
+     </div> 
+  </div>
+  
+
+               <!-- feedback section -->
+<div id="container">
+<div class="feedback_webpage">
+     <form action="" class="feedback_cont">
+     <div class="feed_header ">
+          <a>Feedback</a>
+          <p id="content"></p>
+     </div>
+     <div class="feed_content">
+          <div class="feed_name">
+               <input type="text" placeholder="Enter your name" class="text" required id="feed_nam" autocomplete="off">
+          </div>
+          <div class="feed_msging">
+               <textarea class="textarea" cols="30" rows="10"
+               placeholder="Enter your message" required id="feed_msg" autocomplete="off"></textarea>
+          </div>
+     </div>
+     <div class="feed_star">
+          <div id="like">
+            <input type="radio" name="alike" id="blike">
+            <label for="blike" class="fa fa-thumbs-up"></label>
+            <input type="radio" name="alike" id="dlike">
+            <label for="dlike" class="fa fa-thumbs-down"></label>
+          </div>
+          <div id="star-logo"></div>
+          <div id="post_btn">
+               <input type="submit" id="submit_btn" value="Post"></div>
+     </div>
+  </form>
+</div>
+</div>
+
+                              <!--footer-->
+<footer><a href="404errorpage.html">Feedback</a></footer>
+
+<script src="navbar.js"></script>                  
+<script src="feedback.js"></script>
+</body>
+</html>

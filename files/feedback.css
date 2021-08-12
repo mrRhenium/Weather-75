@@ -1,0 +1,301 @@
+@import "navbar.css";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;    
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  /* background-color:rgba(0,0,0); */
+  border: 0px solid red;
+}
+.feedback_webpage{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: black;
+  border: 2px solid red;
+}
+.feedback_cont{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  background-color: black;
+  border: 2px solid red;
+}
+.feed_header{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 20%;
+  border: 1px solid red;
+}
+.feed_header a{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  font-size: 3rem;
+  color: white;
+}
+.feed_content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  border: 1px solid red;
+}
+.feed_name{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 25%;
+  border: 1px solid red;
+}
+.feed_name .text{
+  text-align: center;
+  text-transform: capitalize;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  outline: none;
+  background-color: wheat;
+  box-shadow: inset 0 0 8px 0px black;
+
+}
+.feed_name .text::placeholder{
+  text-align: center;
+}
+.feed_msging{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 75%;
+  border: 1px solid red;
+}
+.feed_msging .textarea{
+  width: 100%;
+  font-size: 1.5rem;
+  outline: none;
+  padding: .5rem;
+  background-color: wheat;
+  box-shadow: inset 0 0 8px 0px black;
+}
+.feed_msging .textarea::placeholder{
+  text-align: center;
+  /* color: red; */
+}
+.feed_star{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+  /* background-color: white; */
+  border: 1px solid red;
+}
+#star-logo{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  border: 0px solid white;
+  transform: rotateY(180deg) !important;
+}
+#like,#post_btn{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  border: 0px solid white;
+}
+#star-logo input,#like input{
+  display: none;
+}
+#like label,#post_btn button,#star-logo label{
+  position: relative;
+  font-size: 2rem;
+  color: white;
+  padding: .5rem;
+  transition: all .2s ease;
+}
+#star-logo input:not(:checked) ~ label:hover,
+#star-logo input:not(:checked) ~ label:hover ~ label{  
+  color: yellow;
+}
+#star-logo input:checked ~ label{
+  color: #fd4;
+  font-size: 2.4rem;
+}
+#content{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  color: yellow;
+  padding-left: 2rem;
+}
+#like input:checked + label{
+  color: #09aeff;
+  font-size: 2.2rem;
+}
+#like label:hover{
+  font-size: 1.8rem;
+}
+
+#post_btn input{
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 5rem;
+  height: 1.8rem;
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: red;
+  border: 1px solid white;
+  padding: 0 .5rem 0 .5rem ;
+}
+#post_btn input:hover{
+  font-size: 1.4rem;
+  transform: scale(.95);
+  color: red;
+  box-shadow: 0 0 5px white;
+}
+@media screen and (max-width:1123px){
+  #star-logo label{
+    font-size: 1.8rem;
+  }
+  #star-logo input:checked ~ label{
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width:800px){
+  .feed_content{
+         height: 70%;
+  }
+  .feed_header{
+         height: 15%;
+  }
+  .feed_star{
+         width: 100%;
+         height: 15%;
+  }
+  .feedback_cont{
+        width: 70%;
+  }
+  .feed_header a{
+         font-size: 3.5rem;
+  }
+  #content{
+    font-size: 1.5rem;
+  }
+  .feed_name .text{
+         font-size: 2.5rem;
+  }
+  .feed_msging .textarea{
+         font-size: 3rem !important;
+  }
+  #star-logo label{
+    font-size: 2.8rem;
+  }
+  #star-logo input:checked ~ label{
+    font-size: 3.2rem;
+  }
+  #like label{
+    font-size: 3rem;
+  }
+  #like input:checked + label{
+    font-size: 3.5rem;
+  }
+  #like label:hover{
+    font-size: 2.8rem;
+  }
+  
+  #post_btn input{
+    width: 7rem;
+    height: 3rem;
+    font-size: 2.5rem;
+  }
+  #post_btn input:hover{
+    font-size: 2.2rem;
+    transform: scale(.95);
+  }
+}
+@media screen and (max-width:680px){
+  #star-logo label{
+    font-size: 2.5rem;
+  }
+  #star-logo input:checked ~ label{
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width:575px){
+  .feedback_cont{
+    width: 80%;
+    height: 50%;
+  }
+  .feed_header a{
+         font-size: 4.5rem;
+  }
+  #content{
+    display: none;
+  }
+}
+
+@media screen and (max-width:500px){
+  #star-logo label{
+    font-size: 2rem;
+  }
+  #star-logo input:checked ~ label{
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width:430px){
+  .feedback_cont{
+    width: 95%;
+  }
+  #star-logo label{
+    font-size: 1.5rem;
+  }
+  #star-logo input:checked ~ label{
+    font-size: 1.8rem;
+  }
+  #like label{
+    font-size: 2.2rem;
+  }
+  #like input:checked + label{
+    font-size: 3rem;
+  }
+  #like label:hover{
+    font-size: 2.3rem;
+  }
+  
+  #post_btn input{
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 1.7rem;
+  }
+  #post_btn input:hover{
+    font-size: 1.5rem;
+    transform: scale(.95);
+  }
+}
