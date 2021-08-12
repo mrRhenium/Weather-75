@@ -279,19 +279,19 @@
     width: 95%;
   }
   #star-logo label{
-    font-size: 2rem;
-  }
-  #star-logo input:checked ~ label{
-    font-size: 2.2rem;
-  }
-  #like label{
-    font-size: 2.2rem;
-  }
-  #like input:checked + label{
     font-size: 3rem;
   }
+  #star-logo input:checked ~ label{
+    font-size: 3.3rem;
+  }
+  #like label{
+    font-size: 3rem;
+  }
+  #like input:checked + label{
+    font-size: 3.2rem;
+  }
   #like label:hover{
-    font-size: 2.3rem;
+    font-size: 2.8rem;
   }
   
   #post_btn input{
